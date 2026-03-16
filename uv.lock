@@ -20,6 +20,12 @@ wheels = [
 ]
 
 [[package]]
+name = "minisom"
+version = "2.3.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/9c/999bc2f1bee4cfbb6157ac03db32f5a831322479151941bc997774c405c6/minisom-2.3.6.tar.gz", hash = "sha256:1fca9cfeef62b221a89930ad3422b7a24a2bd66ae43ef97332e165f5975c09f1", size = 13140, upload-time = "2026-02-11T12:04:56.267Z" }
+
+[[package]]
 name = "numpy"
 version = "2.4.2"
 source = { registry = "https://pypi.org/simple" }
@@ -163,6 +169,7 @@ name = "project1"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "minisom" },
     { name = "numpy" },
     { name = "pandas" },
     { name = "scikit-learn" },
@@ -170,6 +177,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "minisom", specifier = ">=2.3.6" },
     { name = "numpy", specifier = ">=2.4.2" },
     { name = "pandas", specifier = ">=3.0.1" },
     { name = "scikit-learn", specifier = ">=1.8.0" },
